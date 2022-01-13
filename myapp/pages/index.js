@@ -1,18 +1,24 @@
 import React from 'react';
-import Link from 'next/link';
+import Router from 'next/router';
+import Head from 'next/head';
+
+import Layout from '../Components/Layout';
 
 const Index = () => {
   return (
-    <div>
+    <Layout>
+      <Head>
+        <title>
+          Hi Hello
+        </title>
+      </Head>
       <h1>
         hello, Next.js
       </h1>
-      <h2>
-        <Link href="/about">
-          <div style={{"text-decoration": "underline", "cursor": "pointer"}}>Intro</div>
-        </Link>
-      </h2>
-    </div>
+      <div>
+        <button onClick={() => Router.push('/search?keyword=something')}>Search something</button>
+      </div>
+    </Layout>
   );
 };
 

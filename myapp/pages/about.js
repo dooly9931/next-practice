@@ -1,10 +1,19 @@
 import React from 'react';
 
+import Layout from '../Components/Layout';
+
 const About = () => {
   return (
-    <div>
+    <Layout>
+      <style jsx>
+        {`
+          h2 {
+            color: green
+          }
+        `}
+      </style>
       <h2>Hi, I'm Ted.</h2>
-    </div>
+    </Layout>
   );
 };
 
